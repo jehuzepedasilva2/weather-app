@@ -6,6 +6,74 @@
   <title>Weather-App</title>
 </head>
 <body>
-  
+  <!-- change cachedElements.js -->
+  <div class="left">
+    <div class="left-top">
+      <input type="search" id="search-box" name="search_box"/>
+      <button id="search-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF">
+          <path d="M792-120.67 532.67-380q-30 25.33-69.64 39.67Q423.39-326 378.67-326q-108.44 0-183.56-75.17Q120-476.33 120-583.33t75.17-182.17q75.16-75.17 182.5-75.17 107.33 0 182.16 75.17 74.84 75.17 74.84 182.27 0 43.23-14 82.9-14 39.66-40.67 73l260 258.66-48 48Zm-414-272q79.17 0 134.58-55.83Q568-504.33 568-583.33q0-79-55.42-134.84Q457.17-774 378-774q-79.72 0-135.53 55.83-55.8 55.84-55.8 134.84t55.8 134.83q55.81 55.83 135.53 55.83Z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="left-mid">
+      <div class="location top-l">New York, USA</div>
+      <div class="date bottom-l">Thurs 28 Sept</div>
+      <div class="sunrise top-r">
+        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 22H16" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M5 19H19" stroke="#FFFFFF"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 16H22" stroke="#FFFFFF"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 6C8.68629 6 6 8.68629 6 12C6 13.5217 6.56645 14.911 7.5 15.9687H16.5C17.4335 14.911 18 13.5217 18 12C18 8.68629 15.3137 6 12 6Z" stroke="#FFFFFF"  stroke-width="1.5"/>
+          <path d="M12 10L12.5303 9.46967C12.2374 9.17678 11.7626 9.17678 11.4697 9.46967L12 10ZM13.4697 12.5303C13.7626 12.8232 14.2374 12.8232 14.5303 12.5303C14.8232 12.2374 14.8232 11.7626 14.5303 11.4697L13.4697 12.5303ZM9.46967 11.4697C9.17678 11.7626 9.17678 12.2374 9.46967 12.5303C9.76256 12.8232 10.2374 12.8232 10.5303 12.5303L9.46967 11.4697ZM12.75 16V10H11.25V16H12.75ZM11.4697 10.5303L13.4697 12.5303L14.5303 11.4697L12.5303 9.46967L11.4697 10.5303ZM11.4697 9.46967L9.46967 11.4697L10.5303 12.5303L12.5303 10.5303L11.4697 9.46967Z" fill="#FFFFFF"/>
+          <path d="M12 2V3" stroke="#FFFFFF"  stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M22 12L21 12" stroke="#FFFFFF"  stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M3 12L2 12" stroke="#FFFFFF"  stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M19.0708 4.92969L18.678 5.32252" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M5.32178 5.32227L4.92894 4.92943" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        7:00pm
+      </div>
+      <div class="sunset bottom-r">
+        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 22H16" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M5 19H19" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 16H22" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 6C8.68629 6 6 8.68629 6 12C6 13.5217 6.56645 14.911 7.5 15.9687H16.5C17.4335 14.911 18 13.5217 18 12C18 8.68629 15.3137 6 12 6Z" stroke="#FFFFFF" stroke-width="1.5"/>
+          <path d="M12 6V12M12 12L14 10M12 12L10 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 2V3" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M22 12L21 12" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M3 12L2 12" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M19.0708 4.92969L18.678 5.32252" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M5.32178 5.32227L4.92894 4.92943" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        6:00 pm
+      </div>
+    </div>
+    <div class="lef-bot">
+      <div class="temperature">
+        75
+      </div>
+      <div class="condition">
+        <div class="cond active" id="sunny">
+          <div class="cond-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF">
+              <path d="M444-768v-144h72v144h-72Zm265 112-54-52 104-102 52 50-102 104Zm59 212v-72h144v72H768ZM444-48v-144h72v144h-72ZM251-658 147-760l54-50 101 101-51 51Zm509 511L659-252l50-50 104 100-53 55ZM48-444v-72h144v72H48Zm152 297-51-53 102-100 25 24 24 25-100 104Zm280-93q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-72q70 0 119-49t49-119q0-70-49-119t-119-49q-70 0-119 49t-49 119q0 70 49 119t119 49Zm0-168Z"/>
+            </svg>
+          </div>
+          <div class="cond-desc">
+            Sunny
+          </div>
+        </div>
+        <div class="cond"></div>
+        <div class="cond"></div>
+        <div class="cond"></div>
+        <div class="cond"></div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="right-top"></div>
+  </div>
 </body>
 </html>

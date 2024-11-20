@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'montserratthin_italic';
+  src: url('../fonts/font/montserrat-italic-variablefont_wght-webfont.woff2') format('woff2'),
+       url('../fonts/font/montserrat-italic-variablefont_wght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'montserratthin';
+  src: url('../fonts/font/montserrat-variablefont_wght-webfont.woff2') format('woff2'),
+       url('../fonts/font/montserrat-variablefont_wght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'montserratthin';
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color:#60a5fa;
+}
+
+.left {
+  flex: 1;
+  min-width: 254px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+.left-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-mid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 10px;
+  color: white;
+  margin-top: 50px;
+}
+
+.location, 
+.date {
+  justify-self: center;
+  align-self: center;
+}
+
+.location.top-l {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 1.2rem;
+
+}
+
+.date.bottom-l {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.sunrise, .sunset {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.sunrise.top-r {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.sunset.bottom-r {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.left-bot {
+  display: flex;
+  flex-direction: column;
+}
+
+.temperature {
+  color: white;
+  font-size: 4rem;
+}
+
+.temperature::after {
+  content: "°";
+  font-size: inherit;
+}
+
+.cond.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 4px;
+  color: white;
+}
+
+.cond {
+  display: none;
+}
+
+.right {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  background-color:#bfdbfe;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.right-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-button {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+#search-button:hover {
+  transform: scale(1.1);
+}
+
+#search-button:active {
+  opacity: 0.5;
+}
