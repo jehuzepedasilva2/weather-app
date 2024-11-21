@@ -6,69 +6,320 @@
   <title>Weather-App</title>
 </head>
 <body>
-  <!-- change cachedElements.js -->
   <div class="left">
+
     <div class="left-top">
-      <input type="search" id="search-box" name="search_box"/>
-      <button id="search-button">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF">
-          <path d="M792-120.67 532.67-380q-30 25.33-69.64 39.67Q423.39-326 378.67-326q-108.44 0-183.56-75.17Q120-476.33 120-583.33t75.17-182.17q75.16-75.17 182.5-75.17 107.33 0 182.16 75.17 74.84 75.17 74.84 182.27 0 43.23-14 82.9-14 39.66-40.67 73l260 258.66-48 48Zm-414-272q79.17 0 134.58-55.83Q568-504.33 568-583.33q0-79-55.42-134.84Q457.17-774 378-774q-79.72 0-135.53 55.83-55.8 55.84-55.8 134.84t55.8 134.83q55.81 55.83 135.53 55.83Z"/>
-        </svg>
-      </button>
+      <div>
+        <input type="search" id="search-box" name="search_box"/>
+        <button id="search-button">
+          <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF">
+            <path d="M792-120.67 532.67-380q-30 25.33-69.64 39.67Q423.39-326 378.67-326q-108.44 0-183.56-75.17Q120-476.33 120-583.33t75.17-182.17q75.16-75.17 182.5-75.17 107.33 0 182.16 75.17 74.84 75.17 74.84 182.27 0 43.23-14 82.9-14 39.66-40.67 73l260 258.66-48 48Zm-414-272q79.17 0 134.58-55.83Q568-504.33 568-583.33q0-79-55.42-134.84Q457.17-774 378-774q-79.72 0-135.53 55.83-55.8 55.84-55.8 134.84t55.8 134.83q55.81 55.83 135.53 55.83Z"/>
+          </svg>
+        </button>
+      </div>
+      <div>
+        °F
+        <label class="switch">
+          <input type="checkbox"/>
+          <span class="slider round"></span>
+        </label>
+        °C
+      </div>
     </div>
+
     <div class="left-mid">
-      <div class="location top-l">New York, USA</div>
-      <div class="date bottom-l">Thurs 28 Sept</div>
-      <div class="sunrise top-r">
-        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 22H16" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M5 19H19" stroke="#FFFFFF"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M2 16H22" stroke="#FFFFFF"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M12 6C8.68629 6 6 8.68629 6 12C6 13.5217 6.56645 14.911 7.5 15.9687H16.5C17.4335 14.911 18 13.5217 18 12C18 8.68629 15.3137 6 12 6Z" stroke="#FFFFFF"  stroke-width="1.5"/>
-          <path d="M12 10L12.5303 9.46967C12.2374 9.17678 11.7626 9.17678 11.4697 9.46967L12 10ZM13.4697 12.5303C13.7626 12.8232 14.2374 12.8232 14.5303 12.5303C14.8232 12.2374 14.8232 11.7626 14.5303 11.4697L13.4697 12.5303ZM9.46967 11.4697C9.17678 11.7626 9.17678 12.2374 9.46967 12.5303C9.76256 12.8232 10.2374 12.8232 10.5303 12.5303L9.46967 11.4697ZM12.75 16V10H11.25V16H12.75ZM11.4697 10.5303L13.4697 12.5303L14.5303 11.4697L12.5303 9.46967L11.4697 10.5303ZM11.4697 9.46967L9.46967 11.4697L10.5303 12.5303L12.5303 10.5303L11.4697 9.46967Z" fill="#FFFFFF"/>
-          <path d="M12 2V3" stroke="#FFFFFF"  stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M22 12L21 12" stroke="#FFFFFF"  stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M3 12L2 12" stroke="#FFFFFF"  stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M19.0708 4.92969L18.678 5.32252" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M5.32178 5.32227L4.92894 4.92943" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        7:00pm
-      </div>
-      <div class="sunset bottom-r">
-        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 22H16" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M5 19H19" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M2 16H22" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M12 6C8.68629 6 6 8.68629 6 12C6 13.5217 6.56645 14.911 7.5 15.9687H16.5C17.4335 14.911 18 13.5217 18 12C18 8.68629 15.3137 6 12 6Z" stroke="#FFFFFF" stroke-width="1.5"/>
-          <path d="M12 6V12M12 12L14 10M12 12L10 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M12 2V3" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M22 12L21 12" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M3 12L2 12" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M19.0708 4.92969L18.678 5.32252" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M5.32178 5.32227L4.92894 4.92943" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        6:00 pm
-      </div>
-    </div>
-    <div class="lef-bot">
-      <div class="temperature">
-        75
-      </div>
-      <div class="condition">
-        <div class="cond active" id="sunny">
-          <div class="cond-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF">
-              <path d="M444-768v-144h72v144h-72Zm265 112-54-52 104-102 52 50-102 104Zm59 212v-72h144v72H768ZM444-48v-144h72v144h-72ZM251-658 147-760l54-50 101 101-51 51Zm509 511L659-252l50-50 104 100-53 55ZM48-444v-72h144v72H48Zm152 297-51-53 102-100 25 24 24 25-100 104Zm280-93q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-72q70 0 119-49t49-119q0-70-49-119t-119-49q-70 0-119 49t-49 119q0 70 49 119t119 49Zm0-168Z"/>
+      <div class="location">San Francisco, USA</div>
+      <div class="date">Thurs 28 Sept</div>
+      <div class="sunrise-sunset">
+        <div class="sunrise">
+          <div class="sunrise-icon">
+            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 22H16" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 19H19" stroke="#FFFFFF"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 16H22" stroke="#FFFFFF"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 6C8.68629 6 6 8.68629 6 12C6 13.5217 6.56645 14.911 7.5 15.9687H16.5C17.4335 14.911 18 13.5217 18 12C18 8.68629 15.3137 6 12 6Z" stroke="#FFFFFF"  stroke-width="1.5"/>
+              <path d="M12 10L12.5303 9.46967C12.2374 9.17678 11.7626 9.17678 11.4697 9.46967L12 10ZM13.4697 12.5303C13.7626 12.8232 14.2374 12.8232 14.5303 12.5303C14.8232 12.2374 14.8232 11.7626 14.5303 11.4697L13.4697 12.5303ZM9.46967 11.4697C9.17678 11.7626 9.17678 12.2374 9.46967 12.5303C9.76256 12.8232 10.2374 12.8232 10.5303 12.5303L9.46967 11.4697ZM12.75 16V10H11.25V16H12.75ZM11.4697 10.5303L13.4697 12.5303L14.5303 11.4697L12.5303 9.46967L11.4697 10.5303ZM11.4697 9.46967L9.46967 11.4697L10.5303 12.5303L12.5303 10.5303L11.4697 9.46967Z" fill="#FFFFFF"/>
+              <path d="M12 2V3" stroke="#FFFFFF"  stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M22 12L21 12" stroke="#FFFFFF"  stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M3 12L2 12" stroke="#FFFFFF"  stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M19.0708 4.92969L18.678 5.32252" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M5.32178 5.32227L4.92894 4.92943" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
           </div>
-          <div class="cond-desc">
-            Sunny
+          <div class="sunrise-time">7:00pm</div>
+        </div>
+        <div class="sunset">
+          <div class="sunset-icon">
+            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 22H16" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 19H19" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 16H22" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 6C8.68629 6 6 8.68629 6 12C6 13.5217 6.56645 14.911 7.5 15.9687H16.5C17.4335 14.911 18 13.5217 18 12C18 8.68629 15.3137 6 12 6Z" stroke="#FFFFFF" stroke-width="1.5"/>
+              <path d="M12 6V12M12 12L14 10M12 12L10 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 2V3" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M22 12L21 12" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M3 12L2 12" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M19.0708 4.92969L18.678 5.32252" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M5.32178 5.32227L4.92894 4.92943" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="sunset-time">6:00pm</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lef-bot">
+
+      <div class="temperature">
+        <div class="temp f">
+          75
+        </div>
+      </div>
+
+      <div class="condition">
+
+        <div class="cond" id="clear-day">
+          <div class="icon clear-day">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M440-760v-160h80v160h-80Zm266 110-55-55 112-115 56 57-113 113Zm54 210v-80h160v80H760ZM440-40v-160h80v160h-80ZM254-652 140-763l57-56 113 113-56 54Zm508 512L651-255l54-54 114 110-57 59ZM40-440v-80h160v80H40Zm157 300-56-57 112-112 29 27 29 28-114 114Zm283-100q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-80q66 0 113-47t47-113q0-66-47-113t-113-47q-66 0-113 47t-47 113q0 66 47 113t113 47Zm0-160Z"/>
+            </svg>
+          </div>
+          <div class="desc clear-day">
+            Clear
           </div>
         </div>
-        <div class="cond"></div>
-        <div class="cond"></div>
-        <div class="cond"></div>
-        <div class="cond"></div>
+
+        <div class="cond" id="clear-night">
+          <div class="icon clear-night">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M560-80q-82 0-155-31.5t-127.5-86Q223-252 191.5-325T160-480q0-83 31.5-155.5t86-127Q332-817 405-848.5T560-880q54 0 105 14t95 40q-91 53-145.5 143.5T560-480q0 112 54.5 202.5T760-134q-44 26-95 40T560-80Zm0-80h21q10 0 19-2-57-66-88.5-147.5T480-480q0-89 31.5-170.5T600-798q-9-2-19-2h-21q-133 0-226.5 93.5T240-480q0 133 93.5 226.5T560-160Zm-80-320Z"/>
+            </svg>
+          </div>
+          <div class="desc clear-night">
+            Clear
+          </div>
+        </div>
+
+        <div class="cond" id="cloudy">
+          <div class="icon cloudy">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M260-160q-91 0-155.5-63T40-377q0-78 47-139t123-78q25-92 100-149t170-57q117 0 198.5 81.5T760-520q69 8 114.5 59.5T920-340q0 75-52.5 127.5T740-160H260Zm0-80h480q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-80q0-83-58.5-141.5T480-720q-83 0-141.5 58.5T280-520h-20q-58 0-99 41t-41 99q0 58 41 99t99 41Zm220-240Z"/>
+            </svg>
+          </div>
+          <div class="desc cloudy">
+            Cloudy
+          </div>
+        </div>
+
+        <div class="cond" id="fog">
+          <div class="icon fog">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M720-200q-17 0-28.5-11.5T680-240q0-17 11.5-28.5T720-280q17 0 28.5 11.5T760-240q0 17-11.5 28.5T720-200ZM280-80q-17 0-28.5-11.5T240-120q0-17 11.5-28.5T280-160q17 0 28.5 11.5T320-120q0 17-11.5 28.5T280-80Zm-40-120q-17 0-28.5-11.5T200-240q0-17 11.5-28.5T240-280h360q17 0 28.5 11.5T640-240q0 17-11.5 28.5T600-200H240ZM400-80q-17 0-28.5-11.5T360-120q0-17 11.5-28.5T400-160h280q17 0 28.5 11.5T720-120q0 17-11.5 28.5T680-80H400ZM300-320q-91 0-155.5-64.5T80-540q0-83 55-145t136-73q32-57 87.5-89.5T480-880q90 0 156.5 57.5T717-679q69 6 116 57t47 122q0 75-52.5 127.5T700-320H300Zm0-80h400q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-40q0-66-47-113t-113-47q-48 0-87.5 26T333-704l-10 24h-25q-57 2-97.5 42.5T160-540q0 58 41 99t99 41Zm180-200Z"/>
+            </svg>
+          </div>
+          <div class="desc fog">
+            Fog
+          </div>
+        </div>
+
+        <div class="cond" id="hail">
+          <div class="icon hail">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="m500-40-60-60 60-60 60 60-60 60Zm-138-60-42-42 118-118 42 42-118 118Zm258-60-60-60 60-60 60 60-60 60Zm-360 0-60-60 60-60 60 60-60 60Zm40-160q-91 0-155.5-64.5T80-540q0-83 55-145t136-73q32-57 87.5-89.5T480-880q90 0 156.5 57.5T717-679q69 6 116 57t47 122q0 75-52.5 127.5T700-320H300Zm0-80h400q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-40q0-66-47-113t-113-47q-48 0-87.5 26T333-704l-10 24h-25q-57 2-97.5 42.5T160-540q0 58 41 99t99 41Zm180-200Z"/>
+            </svg>
+          </div>
+          <div class="desc hail">
+            Hail
+          </div>
+        </div>
+
+        <div class="cond" id="partly-cloudy-day">
+          <div class="icon partly-cloudy-day">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M440-760v-160h80v160h-80Zm266 110-56-56 113-114 56 57-113 113Zm54 210v-80h160v80H760Zm3 299L650-254l56-56 114 112-57 57ZM254-650 141-763l57-57 112 114-56 56Zm-14 450h180q25 0 42.5-17.5T480-260q0-25-17-42.5T421-320h-51l-20-48q-14-33-44-52.5T240-440q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T40-320q0-83 58.5-141.5T240-520q60 0 109.5 32.5T423-400q58 0 97.5 43T560-254q-2 57-42.5 95.5T420-120H240Zm320-134q-5-20-10-39t-10-39q45-19 72.5-59t27.5-89q0-66-47-113t-113-47q-60 0-105 39t-53 99q-20-5-41-9t-41-9q14-88 82.5-144T480-720q100 0 170 70t70 170q0 77-44 138.5T560-254Zm-79-226Z"/>
+            </svg>
+          </div>
+          <div class="desc partly-cloudy-day">
+            Partly Cloudy
+          </div>
+        </div>
+
+        <div class="cond" id="partly-cloudy-night">
+          <div class="icon partly-cloudy-night">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M504-425Zm20 385H420l20-12.5q20-12.5 43.5-28t43.5-28l20-12.5q81-6 149.5-49T805-285q-86-8-163-43.5T504-425q-61-61-97-138t-43-163q-77 43-120.5 118.5T200-444v12l-12 5.5q-12 5.5-26.5 11.5T135-403.5l-12 5.5q-2-11-2.5-23t-.5-23q0-146 93-257.5T450-840q-18 99 11 193.5T561-481q71 71 165.5 100T920-370q-26 144-138 237T524-40Zm-284-80h180q25 0 42.5-17.5T480-180q0-25-17-42.5T422-240h-52l-20-48q-14-33-44-52.5T240-360q-50 0-85 34.5T120-240q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T40-240q0-83 58.5-141.5T240-440q60 0 109.5 32.5T423-320q57 2 97 42.5t40 97.5q0 58-41 99t-99 41H240Z"/>
+            </svg>
+          </div>
+          <div class="desc partly-cloudy-night">
+            Partly Cloudy
+          </div>
+        </div>
+
+        <div class="cond" id="rain-snow-showers-day">
+          <div class="icon rain-snow-showers-day">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M338-204q-15 8-30.5 2.5T284-222l-60-120q-8-15-2.5-30.5T242-396q15-8 30.5-2.5T296-378l60 120q8 15 2.5 30.5T338-204Zm360 0q-15 8-30.5 2.5T644-222L464-582q-8-15-2.5-30.5T482-636q15-8 30.5-2.5T536-618l180 360q8 15 2.5 30.5T698-204Zm-188 4q-17 0-28.5-11.5T470-240q0-17 11.5-28.5T510-280q17 0 28.5 11.5T550-240q0 17-11.5 28.5T510-200Zm388-4q-15 8-30.5 2.5T844-222l-20-40q-8-15-2.5-30.5T842-316q15-8 30.5-2.5T896-298l20 40q8 15 2.5 30.5T898-204ZM458-324q-15 8-30.5 2.5T404-342L224-702q-8-15-2.5-30.5T242-756q15-8 30.5-2.5T296-738l180 360q8 15 2.5 30.5T458-324Zm342-36q-17 0-28.5-11.5T760-400q0-17 11.5-28.5T800-440q17 0 28.5 11.5T840-400q0 17-11.5 28.5T800-360Zm-600-80q-17 0-28.5-11.5T160-480q0-17 11.5-28.5T200-520q17 0 28.5 11.5T240-480q0 17-11.5 28.5T200-440Zm558-44q-15 8-30.5 2.5T704-502L604-702q-8-15-2.5-30.5T622-756q15-8 30.5-2.5T676-738l100 200q8 15 2.5 30.5T758-484Zm-600-80q-15 8-30.5 2.5T104-582L44-702q-8-15-2.5-30.5T62-756q15-8 30.5-2.5T116-738l60 120q8 15 2.5 30.5T158-564Zm292-116q-17 0-28.5-11.5T410-720q0-17 11.5-28.5T450-760q17 0 28.5 11.5T490-720q0 17-11.5 28.5T450-680Z"/>
+            </svg>
+          </div>
+          <div class="desc rain-snow-showers-day">
+            Rainy Snow
+          </div>
+        </div>
+
+        <div class="cond" id="rain-snow-showers-night">
+          <div class="icon rain-snow-showers-night">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M338-204q-15 8-30.5 2.5T284-222l-60-120q-8-15-2.5-30.5T242-396q15-8 30.5-2.5T296-378l60 120q8 15 2.5 30.5T338-204Zm360 0q-15 8-30.5 2.5T644-222L464-582q-8-15-2.5-30.5T482-636q15-8 30.5-2.5T536-618l180 360q8 15 2.5 30.5T698-204Zm-188 4q-17 0-28.5-11.5T470-240q0-17 11.5-28.5T510-280q17 0 28.5 11.5T550-240q0 17-11.5 28.5T510-200Zm388-4q-15 8-30.5 2.5T844-222l-20-40q-8-15-2.5-30.5T842-316q15-8 30.5-2.5T896-298l20 40q8 15 2.5 30.5T898-204ZM458-324q-15 8-30.5 2.5T404-342L224-702q-8-15-2.5-30.5T242-756q15-8 30.5-2.5T296-738l180 360q8 15 2.5 30.5T458-324Zm342-36q-17 0-28.5-11.5T760-400q0-17 11.5-28.5T800-440q17 0 28.5 11.5T840-400q0 17-11.5 28.5T800-360Zm-600-80q-17 0-28.5-11.5T160-480q0-17 11.5-28.5T200-520q17 0 28.5 11.5T240-480q0 17-11.5 28.5T200-440Zm558-44q-15 8-30.5 2.5T704-502L604-702q-8-15-2.5-30.5T622-756q15-8 30.5-2.5T676-738l100 200q8 15 2.5 30.5T758-484Zm-600-80q-15 8-30.5 2.5T104-582L44-702q-8-15-2.5-30.5T62-756q15-8 30.5-2.5T116-738l60 120q8 15 2.5 30.5T158-564Zm292-116q-17 0-28.5-11.5T410-720q0-17 11.5-28.5T450-760q17 0 28.5 11.5T490-720q0 17-11.5 28.5T450-680Z"/>
+            </svg>
+          </div>
+          <div class="desc rain-snow-showers-night">
+            Rainy Snow
+          </div>
+        </div>
+
+        <div class="cond" id="rain-snow">
+          <div class="icon rain-snow">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M338-204q-15 8-30.5 2.5T284-222l-60-120q-8-15-2.5-30.5T242-396q15-8 30.5-2.5T296-378l60 120q8 15 2.5 30.5T338-204Zm360 0q-15 8-30.5 2.5T644-222L464-582q-8-15-2.5-30.5T482-636q15-8 30.5-2.5T536-618l180 360q8 15 2.5 30.5T698-204Zm-188 4q-17 0-28.5-11.5T470-240q0-17 11.5-28.5T510-280q17 0 28.5 11.5T550-240q0 17-11.5 28.5T510-200Zm388-4q-15 8-30.5 2.5T844-222l-20-40q-8-15-2.5-30.5T842-316q15-8 30.5-2.5T896-298l20 40q8 15 2.5 30.5T898-204ZM458-324q-15 8-30.5 2.5T404-342L224-702q-8-15-2.5-30.5T242-756q15-8 30.5-2.5T296-738l180 360q8 15 2.5 30.5T458-324Zm342-36q-17 0-28.5-11.5T760-400q0-17 11.5-28.5T800-440q17 0 28.5 11.5T840-400q0 17-11.5 28.5T800-360Zm-600-80q-17 0-28.5-11.5T160-480q0-17 11.5-28.5T200-520q17 0 28.5 11.5T240-480q0 17-11.5 28.5T200-440Zm558-44q-15 8-30.5 2.5T704-502L604-702q-8-15-2.5-30.5T622-756q15-8 30.5-2.5T676-738l100 200q8 15 2.5 30.5T758-484Zm-600-80q-15 8-30.5 2.5T104-582L44-702q-8-15-2.5-30.5T62-756q15-8 30.5-2.5T116-738l60 120q8 15 2.5 30.5T158-564Zm292-116q-17 0-28.5-11.5T410-720q0-17 11.5-28.5T450-760q17 0 28.5 11.5T490-720q0 17-11.5 28.5T450-680Z"/>
+            </svg>
+          </div>
+          <div class="desc rain-snow">
+            Rainy Snow
+          </div>
+        </div>
+
+        <div class="cond" id="rain">
+          <div class="icon rain">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M558-84q-15 8-30.5 2.5T504-102l-60-120q-8-15-2.5-30.5T462-276q15-8 30.5-2.5T516-258l60 120q8 15 2.5 30.5T558-84Zm240 0q-15 8-30.5 2.5T744-102l-60-120q-8-15-2.5-30.5T702-276q15-8 30.5-2.5T756-258l60 120q8 15 2.5 30.5T798-84Zm-480 0q-15 8-30.5 2.5T264-102l-60-120q-8-15-2.5-30.5T222-276q15-8 30.5-2.5T276-258l60 120q8 15 2.5 30.5T318-84Zm-18-236q-91 0-155.5-64.5T80-540q0-83 55-145t136-73q32-57 87.5-89.5T480-880q90 0 156.5 57.5T717-679q69 6 116 57t47 122q0 75-52.5 127.5T700-320H300Zm0-80h400q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-40q0-66-47-113t-113-47q-48 0-87.5 26T333-704l-10 24h-25q-57 2-97.5 42.5T160-540q0 58 41 99t99 41Zm180-200Z"/>
+            </svg>
+          </div>
+          <div class="desc rain">
+            Rain
+          </div>
+        </div>
+
+        <div class="cond" id="showers-day">
+          <div class="icon showers-day">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M338-204q-15 8-30.5 2.5T284-222L44-702q-8-15-2.5-30.5T62-756q15-8 30.5-2.5T116-738l240 480q8 15 2.5 30.5T338-204Zm187 0q-15 8-30.5 2.5T471-222L231-702q-8-15-2.5-30.5T249-756q15-8 30-2.5t23 20.5l241 480q8 15 2.5 30.5T525-204Zm187-1q-15 8-30.5 3T658-222L418-702q-8-15-2.5-30.5T436-756q15-8 30-2.5t23 20.5l241 480q8 15 2.5 30T712-205Zm186 1q-15 8-30.5 2.5T844-222L604-702q-8-15-2.5-30.5T622-756q15-8 30.5-2.5T676-738l240 480q8 15 2.5 30.5T898-204Z"/>
+            </svg>
+          </div>
+          <div class="desc showers-day">
+            Showers
+          </div>
+        </div>
+
+        <div class="cond" id="showers-night">
+          <div class="icon showers-night">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M338-204q-15 8-30.5 2.5T284-222L44-702q-8-15-2.5-30.5T62-756q15-8 30.5-2.5T116-738l240 480q8 15 2.5 30.5T338-204Zm187 0q-15 8-30.5 2.5T471-222L231-702q-8-15-2.5-30.5T249-756q15-8 30-2.5t23 20.5l241 480q8 15 2.5 30.5T525-204Zm187-1q-15 8-30.5 3T658-222L418-702q-8-15-2.5-30.5T436-756q15-8 30-2.5t23 20.5l241 480q8 15 2.5 30T712-205Zm186 1q-15 8-30.5 2.5T844-222L604-702q-8-15-2.5-30.5T622-756q15-8 30.5-2.5T676-738l240 480q8 15 2.5 30.5T898-204Z"/>
+            </svg>
+          </div>
+          <div class="desc showers-night">
+            Showers
+          </div>
+        </div>
+
+        <div class="cond" id="sleet">
+          <div class="icon sleet">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M800-560q-17 0-28.5-11.5T760-600q0-17 11.5-28.5T800-640q17 0 28.5 11.5T840-600q0 17-11.5 28.5T800-560ZM400-80v-144L296-120l-56-56 160-160v-64h-64L176-240l-56-56 104-104H80v-80h144L120-584l56-56 160 160h64v-64L240-704l56-56 104 104v-144h80v144l104-104 56 56-160 160v64h320v80H656l104 104-56 56-160-160h-64v64l160 160-56 56-104-104v144h-80Zm360-600v-200h80v200h-80Z"/>
+            </svg>
+          </div>
+          <div class="desc sleet">
+            Sleet
+          </div>
+        </div>
+
+        <div class="cond" id="snow-showers-day">
+          <div class="icon snow-showers-day">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M40-410v-80h160v80H40Zm214-210L140-733l57-56 113 113-56 56Zm-14 420q-21 0-35.5-14.5T190-250q0-21 14.5-35.5T240-300q21 0 35.5 14.5T290-250q0 21-14.5 35.5T240-200Zm40-210v-40q0-83 58.5-141.5T480-650q83 0 141.5 58.5T680-450v40h-80v-40q0-50-35-85t-85-35q-50 0-85 35t-35 85v40h-80Zm80 370q-21 0-35.5-14.5T310-90q0-21 14.5-35.5T360-140q21 0 35.5 14.5T410-90q0 21-14.5 35.5T360-40Zm120-160q-21 0-35.5-14.5T430-250q0-21 14.5-35.5T480-300q21 0 35.5 14.5T530-250q0 21-14.5 35.5T480-200Zm-40-530v-160h80v160h-80ZM600-40q-21 0-35.5-14.5T550-90q0-21 14.5-35.5T600-140q21 0 35.5 14.5T650-90q0 21-14.5 35.5T600-40Zm106-580-57-56 114-113 56 56-113 113Zm14 420q-21 0-35.5-14.5T670-250q0-21 14.5-35.5T720-300q21 0 35.5 14.5T770-250q0 21-14.5 35.5T720-200Zm40-210v-80h160v80H760Zm-280 0Z"/>
+            </svg>
+          </div>
+          <div class="desc snow-showers-day">
+            Snow Showers
+          </div>
+        </div>
+
+        <div class="cond" id="snow-showers-night">
+          <div class="icon snow-showers-night">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M240-350q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T290-400q0 20-14.5 35T240-350Zm0-320q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T290-720q0 20-14.5 35T240-670Zm120 480q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T410-240q0 20-14.5 35T360-190Zm0-320q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T410-560q0 20-14.5 35T360-510Zm120 160q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T530-400q0 20-14.5 35T480-350Zm0-320q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T530-720q0 20-14.5 35T480-670Zm120 480q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T650-240q0 20-14.5 35T600-190Zm0-320q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T650-560q0 20-14.5 35T600-510Zm120 160q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T770-400q0 20-14.5 35T720-350Zm0-320q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T770-720q0 20-14.5 35T720-670Z"/>
+            </svg>
+          </div>
+          <div class="desc snow-showers-night">
+            Snow Showers
+          </div>
+        </div>
+
+        <div class="cond" id="snow">
+          <div class="icon snow">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M260-200q-21 0-35.5-14.5T210-250q0-21 14.5-35.5T260-300q21 0 35.5 14.5T310-250q0 21-14.5 35.5T260-200ZM380-80q-21 0-35.5-14.5T330-130q0-21 14.5-35.5T380-180q21 0 35.5 14.5T430-130q0 21-14.5 35.5T380-80Zm120-120q-21 0-35.5-14.5T450-250q0-21 14.5-35.5T500-300q21 0 35.5 14.5T550-250q0 21-14.5 35.5T500-200Zm240 0q-21 0-35.5-14.5T690-250q0-21 14.5-35.5T740-300q21 0 35.5 14.5T790-250q0 21-14.5 35.5T740-200ZM620-80q-21 0-35.5-14.5T570-130q0-21 14.5-35.5T620-180q21 0 35.5 14.5T670-130q0 21-14.5 35.5T620-80ZM300-360q-91 0-155.5-64.5T80-580q0-83 55-145t136-73q32-57 87.5-89.5T480-920q90 0 156.5 57.5T717-719q69 6 116 57t47 122q0 75-52.5 127.5T700-360H300Zm0-80h400q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-40q0-66-47-113t-113-47q-48 0-87.5 26T333-744l-10 24h-25q-57 2-97.5 42.5T160-580q0 58 41 99t99 41Zm180-100Z"/>
+            </svg>
+          </div>
+          <div class="desc snow">
+            Snow
+          </div>
+        </div>
+
+        <div class="cond" id="thunder-rain">
+          <div class="icon thunder-rain">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M500-40q-25 0-42.5-17T440-99q0-12 4.5-23t13.5-19l42-39 42 39q9 8 13.5 19t4.5 23q0 25-17.5 42T500-40Zm-138-60-42-42 118-118 42 42-118 118Zm258-60-60-60 60-60 60 60-60 60Zm-360 0-60-60 60-60 60 60-60 60Zm40-160q-91 0-155.5-64.5T80-540q0-83 55-145t136-73q32-57 87.5-89.5T480-880q90 0 156.5 57.5T717-679q69 6 116 57t47 122q0 75-52.5 127.5T700-320H300Zm0-80h400q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-40q0-66-47-113t-113-47q-48 0-87.5 26T333-704l-10 24h-25q-57 2-97.5 42.5T160-540q0 58 41 99t99 41Zm180-200Z"/>
+            </svg>
+          </div>
+          <div class="desc thunder-rain">
+            Thunder Rain
+          </div>
+        </div>
+
+        <div class="cond" id="thunder-showers-day">
+          <div class="icon thunder-showers-day">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M500-40q-25 0-42.5-17T440-99q0-12 4.5-23t13.5-19l42-39 42 39q9 8 13.5 19t4.5 23q0 25-17.5 42T500-40Zm-138-60-42-42 118-118 42 42-118 118Zm258-60-60-60 60-60 60 60-60 60Zm-360 0-60-60 60-60 60 60-60 60Zm40-160q-91 0-155.5-64.5T80-540q0-83 55-145t136-73q32-57 87.5-89.5T480-880q90 0 156.5 57.5T717-679q69 6 116 57t47 122q0 75-52.5 127.5T700-320H300Zm0-80h400q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-40q0-66-47-113t-113-47q-48 0-87.5 26T333-704l-10 24h-25q-57 2-97.5 42.5T160-540q0 58 41 99t99 41Zm180-200Z"/>
+            </svg>
+          </div>
+          <div class="desc thunder-showers-day">
+            Thunder Rain
+          </div>
+        </div>
+
+        <div class="cond" id="thunder-showers-night">
+          <div class="icon thunder-showers-night">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M500-40q-25 0-42.5-17T440-99q0-12 4.5-23t13.5-19l42-39 42 39q9 8 13.5 19t4.5 23q0 25-17.5 42T500-40Zm-138-60-42-42 118-118 42 42-118 118Zm258-60-60-60 60-60 60 60-60 60Zm-360 0-60-60 60-60 60 60-60 60Zm40-160q-91 0-155.5-64.5T80-540q0-83 55-145t136-73q32-57 87.5-89.5T480-880q90 0 156.5 57.5T717-679q69 6 116 57t47 122q0 75-52.5 127.5T700-320H300Zm0-80h400q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-40q0-66-47-113t-113-47q-48 0-87.5 26T333-704l-10 24h-25q-57 2-97.5 42.5T160-540q0 58 41 99t99 41Zm180-200Z"/>
+            </svg>
+          </div>
+          <div class="desc thunder-showers-night">
+            Thunder Rain
+          </div>
+        </div>
+
+        <div class="cond" id="thunder">
+          <div class="icon thunder">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="m462 0 94-107-80-40 116-133h106l-94 107 80 40L568 0H462ZM222 0l94-107-80-40 116-133h106l-94 107 80 40L328 0H222Zm78-320q-91 0-155.5-64.5T80-540q0-83 55-145t136-73q32-57 87.5-89.5T480-880q90 0 156.5 57.5T717-679q69 6 116 57t47 122q0 75-52.5 127.5T700-320H300Zm0-80h400q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-40q0-66-47-113t-113-47q-48 0-87.5 26T333-704l-10 24h-25q-57 2-97.5 42.5T160-540q0 58 41 99t99 41Zm180-200Z"/>
+            </svg>
+          </div>
+          <div class="desc thunder">
+            Thunder
+          </div>
+        </div>
+
+        <div class="cond" id="wind">
+          <div class="icon wind">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path d="M460-160q-50 0-85-35t-35-85h80q0 17 11.5 28.5T460-240q17 0 28.5-11.5T500-280q0-17-11.5-28.5T460-320H80v-80h380q50 0 85 35t35 85q0 50-35 85t-85 35ZM80-560v-80h540q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43h-80q0-59 40.5-99.5T620-840q59 0 99.5 40.5T760-700q0 59-40.5 99.5T620-560H80Zm660 320v-80q26 0 43-17t17-43q0-26-17-43t-43-17H80v-80h660q59 0 99.5 40.5T880-380q0 59-40.5 99.5T740-240Z"/>
+            </svg>
+          </div>
+          <div class="desc wind">
+            Windy
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

@@ -1,8 +1,10 @@
 import './styles.css';
-import { handleButton } from './eventsHandler';
+import { 
+  handleStart
+} from './eventsHandler';
 
 function main() {
-  handleButton();
+  handleStart();
 }
 
 main();

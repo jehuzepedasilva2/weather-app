@@ -32,62 +32,118 @@ body {
 
 .left {
   flex: 1;
-  min-width: 254px;
+  min-width: 304px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   padding: 10px;
   padding-top: 20px;
 }
 
+.left-top > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
 .left-top {
   display: flex;
-  justify-content: center;
+  width: 90%;
+  justify-content: space-between;
   align-items: center;
 }
 
-.left-mid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  row-gap: 10px;
-  color: white;
-  margin-top: 50px;
-}
-
-.location, 
-.date {
-  justify-self: center;
-  align-self: center;
-}
-
-.location.top-l {
-  grid-column: 1;
-  grid-row: 1;
-  font-size: 1.2rem;
-
-}
-
-.date.bottom-l {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.sunrise, .sunset {
+.left-top div:last-child {
   display: flex;
   align-items: center;
-  gap: 2px;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: white;
 }
 
-.sunrise.top-r {
-  grid-column: 2;
-  grid-row: 1;
+/* --------------------Toggle--------------------- */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 10px;
 }
 
-.sunset.bottom-r {
-  grid-column: 2;
-  grid-row: 2;
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  top: -3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* ---------------------------------------------- */
+
+.left-mid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.location {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.sunrise-sunset {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.sunrise, 
+.sunset {
+  display:flex;
+  gap: 4px;
+  align-items: center;
 }
 
 .left-bot {
@@ -95,13 +151,19 @@ body {
   flex-direction: column;
 }
 
-.temperature {
+.temp {
   color: white;
   font-size: 4rem;
+  font-weight: bolder;
 }
 
-.temperature::after {
-  content: "°";
+.temp.c::after {
+  content: "°C";
+  font-size: inherit;
+}
+
+.temp.f::after {
+  content: "°F";
   font-size: inherit;
 }
 
@@ -131,6 +193,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#search-box {
+  appearance: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px gray;
+  padding: 4px;
+  font-weight: bold;
 }
 
 #search-button {
