@@ -1,7 +1,3 @@
-function sanitizeInput(location) {
-  return location.toLowerCase().split(" ").join("");
-}
-
 function clearInputBox(inputElement) {
   inputElement.value = ''
 }
@@ -48,7 +44,7 @@ function getDateString(date) {
   const dayOfWeek = getDayOfWeek(date.getDay());
   const month = getMonth(date.getMonth());
   const day = date.getDate()
-  return `${dayOfWeek} ${day} ${month}`;
+  return `${dayOfWeek}, ${month} ${day}`;
 }
 
 function convertTempUnits(temp, currUnit) {
@@ -61,7 +57,6 @@ function convertTempUnits(temp, currUnit) {
 
 
 export {
-  sanitizeInput,
   clearInputBox,
   convertTo12HourFormat, 
   getDateString,

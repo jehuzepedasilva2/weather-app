@@ -1,16 +1,7 @@
 @font-face {
-  font-family: 'montserratthin_italic';
-  src: url('../fonts/font/montserrat-italic-variablefont_wght-webfont.woff2') format('woff2'),
-       url('../fonts/font/montserrat-italic-variablefont_wght-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'montserratthin';
-  src: url('../fonts/font/montserrat-variablefont_wght-webfont.woff2') format('woff2'),
-       url('../fonts/font/montserrat-variablefont_wght-webfont.woff') format('woff');
+  font-family: 'sinkin_sans200_x_light';
+  src: url('../fonts/font2/sinkinsans-200xlight-webfont.woff2') format('woff2'),
+       url('../fonts/font2/sinkinsans-200xlight-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
@@ -20,7 +11,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'montserratthin';
+  font-family: 'sinkin_sans200_x_light';
 }
 
 body {
@@ -157,12 +148,12 @@ input:checked + .slider:before {
   font-weight: bolder;
 }
 
-.temp.c::after {
+.c::after {
   content: "°C";
   font-size: inherit;
 }
 
-.temp.f::after {
+.f::after {
   content: "°F";
   font-size: inherit;
 }
@@ -185,14 +176,115 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   background-color:#bfdbfe;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  gap: 10px;
+  padding: 40px;
 }
 
 .right-top {
+  flex: 2;
+  background-color: white;
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-top-header button {
+  appearance: none;
+  border: none;
+  background-color: rgb(231, 229, 229);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.right-top-header button:hover {
+  transform: scale(1.1);
+}
+
+.right-top-header button:active {
+  opacity: 0.5;
+}
+
+.right-mid {
+  margin-bottom: 20px;
+}
+
+.right-mid, 
+.right-bottom {
+  flex: 1;
+  display: flex;
+  gap: 60px;
+  padding: 10px;
+  padding-top: 0;
+  overflow-x: scroll;
+}
+
+.humidity, 
+.wind, 
+.precipitation, 
+.uv-index, 
+.feels-like, 
+.chance-of-rain {
+  flex: 0 0 auto;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  min-width: 300px;
+  min-height: 146px;
+  gap: 5px;
+}
+
+.top {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mid {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.bottom {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.bottom .bar {
+  background: rgb(231, 229, 229);
+  width: 30%;
+  height: 20%;
+  border-radius: 5px;
+  padding-top: 10px;
+}
+
+.svg-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #60a5fa;
+  padding: 2px;
+  border-radius: 10px;
 }
 
 #search-box {
@@ -201,7 +293,6 @@ input:checked + .slider:before {
   border-radius: 10px;
   box-shadow: 0px 2px 2px gray;
   padding: 4px;
-  font-weight: bold;
 }
 
 #search-button {

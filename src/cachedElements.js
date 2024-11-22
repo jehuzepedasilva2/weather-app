@@ -42,6 +42,34 @@ function getAllTempElements(unit) {
   return document.querySelectorAll(`.${unit}`);
 }
 
+function getNextDayButton() {
+  return document.querySelector('.right-top-header button');
+}
+
+function getHumidity() {
+  return document.querySelector('.humidity');
+}
+
+function getWind() {
+  return document.querySelector('.wind');
+}
+
+function getPrecipitation() {
+  return document.querySelector('.precipitation');
+}
+
+function getUVIdex() {
+  return document.querySelector('.uv-index');
+}
+
+function getFeelsLike() {
+  return document.querySelector('.feels-like');
+}
+
+function getChanceOfRain() {
+  return document.querySelector('.chance-of-rain');
+}
+
 export {
   getLocationInput,
   getSubmitButton,
@@ -53,5 +81,12 @@ export {
   getWeatherIcon,
   getActiveIcon,
   getCheckBox,
-  getAllTempElements
+  getAllTempElements, 
+  getNextDayButton,
+  getHumidity, 
+  getWind, 
+  getPrecipitation,
+  getUVIdex,
+  getFeelsLike,
+  getChanceOfRain,
 };
