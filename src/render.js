@@ -12,7 +12,6 @@ import {
   getFeelsLike,
   getChanceOfRain
 } from './cachedElements.js';
-
 import { 
   convertTo12HourFormat,
   getDateString, 
